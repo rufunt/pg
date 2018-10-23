@@ -17,7 +17,7 @@ class TasksController < ApplicationController
   end 
   
   def complete
-    @task.update_attribute(:created_at, Time.now)
+    @task.update_attribute(:completed_at, Time.now)
     redirect_to @project, notice: "Task Completed"
   end
   
